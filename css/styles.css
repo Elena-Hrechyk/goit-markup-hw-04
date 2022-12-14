@@ -1,0 +1,518 @@
+/* Колір основного тексту #434455; */
+/* Колір h1 #FFFFFF; */
+/* Колір заголовків h2, h3 #2E2F42; */
+/* Основний колір фону сторінки bgc: #FFFFFF */
+/* Вториний колір фону сторінки bgc: #F4F4FD; */
+/* Колір акценту #4d5ae5 */
+/* Основний font-family 'Roboto', sans-serif */
+/* Розмір тексту 16pxj */
+
+:root {
+  --font-main: "Roboto", sans-serif;
+  --color-main: #434455;
+  --color-title: #2e2f42;
+  --bg-color-main: #ffffff;
+  --bg-color-secondary: #f4f4fd;
+  --color-focus: #4d5ae5;
+}
+
+body {
+  background-color: var(--bg-color-main);
+  color: var(--color-main);
+  font-family: var(--font-main);
+  font-style: normal;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* ======== Скидання/додавання стилізації у всього контенту ======== */
+
+h1,
+h2,
+h3,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.btn {
+  border: 1px solid transparent;
+}
+
+.container {
+  width: 1158px;
+  margin: 0 auto;
+  padding: 0 15px;
+  /* outline: 2px solid tomato; */
+}
+
+/* ======== Оформлення хедера ======== */
+header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-nav {
+  display: flex;
+  align-items: center;
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+/* ======== оформлення логотипу у хедері ======== */
+
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+header .logo {
+  color: var(--color-title);
+  margin-right: 71px;
+}
+
+.logo span {
+  color: var(--color-focus);
+}
+
+/* ======== Навігація site-nav ======== */
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav .link {
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--color-title);
+  text-decoration: none;
+}
+
+.site-nav > .site-nav-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: #434455;
+  text-decoration: underline;
+}
+
+/* .site-nav .link.current {
+  color: var(--color-focus);
+  text-decoration: underline;
+} */
+
+/* ======== Контактна інформація в хедері ======== */
+.contacts > .contact-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.contacts .link {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: var(--color-main);
+}
+
+.contacts .link:hover,
+.contacts .link:focus {
+  color: var(--color-focus);
+  text-decoration: underline;
+}
+/* ======== Стилізація контенту ======== */
+/* ======== Секція Герой ======== */
+.hero {
+  background: #2E2F42;
+  height: 603px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 190px;
+  padding-bottom: 190px;
+  background-image: linear-gradient(#2e2f42b3, #2e2f42b3),
+    url(../images/hero/people-office.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.hero .hero-title {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.07;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-bottom: 48px;
+}
+
+.hero .hero-btn {
+  cursor: pointer;
+  font-family: var(--font-main);
+  font-weight: 700;
+  line-height: 1.19;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  background: #4d5ae5;
+  padding: 15px 31px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+/* ======== Загальні стилі секцій ======== */
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+/* ======== Заголовки секцій ======== */
+.section-title {
+  color: var(--color-title);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 72px;
+}
+
+/* ======== Заголовки списків ======== */
+.list-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--color-title);
+}
+
+/* ======== Про студию ======== */
+.about-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-right: -24px;
+  margin-top: -24px;
+}
+
+.about-list > .about-item {
+  flex-basis: calc(100% / 4 - 24px);
+  margin-right: 24px;
+  margin-top: 24px;
+}
+
+.icons-about {
+  max-width: 100%;
+  background-color: var(--bg-color-secondary);
+  border-radius: 4px;
+  padding: 24px 100px;
+  margin-bottom: 8px;
+}
+
+.about-list .list-title {
+  margin-bottom: 8px;
+}
+
+.about-item .text {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+/* ======== Про послуги студії ======== */
+.services-section {
+  padding-top: 0;
+}
+.services-section .services {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-right: -24px;
+  margin-top: -24px;
+}
+
+.services > .servic-item {
+  flex-basis: calc(100% / 3 - 24px);
+  margin-right: 24px;
+  margin-top: 24px;
+}
+
+/* ======== Команда студії ======== */
+.team-section {
+  background-color: var(--bg-color-secondary);
+}
+
+.team-section .team-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-right: -24px;
+  margin-top: -24px;
+}
+
+.team-list > .team-item {
+  flex-basis: calc(100% / 4 - 24px);
+  margin-right: 24px;
+  margin-top: 24px;
+  background-color: var(--bg-color-main);
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.team-item > .card-description {
+  text-align: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.team-item .list-title {
+  margin-bottom: 8px;
+}
+
+.team-item .text {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+.team-soc-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  grid-gap: 24px;
+}
+
+.team-soc-item {
+  width: 40px;
+  height: 40px;
+}
+
+.team-soc-item > .link {
+  display: block;
+  text-decoration: none;
+  line-height: 0;
+  border-radius: 50%;
+  background-color: var(--color-focus);
+  padding: 12px;
+}
+
+/* ======== Оформлення списку клієнтов студії ======== */
+.clients-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-right: -24px;
+  margin-top: -24px;
+}
+
+.clients-list > .client-item {
+  max-width: 168px;
+  max-height: 88px;
+  flex-basis: calc(100% / 6 - 24px);
+  margin-right: 24px;
+  margin-top: 24px;
+}
+
+.client-item > .link-client {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 15px 31px;
+  text-decoration: none;
+  line-height: 0;
+  color: #8e8f99;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+}
+
+.client-item > .link-client:hover,
+.client-item > .link-client:focus {
+  border: 1px solid var(--color-focus);
+  color: var(--color-focus);
+}
+
+.link-client > .icon-client {
+  fill: currentColor;
+}
+
+/* ======== Оформлення кнопок Портфоліо ======== */
+.projects-btn {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  grid-gap: 24px;
+}
+
+.projects-btn .btn {
+  cursor: pointer;
+  font-family: var(--font-main);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--color-focus);
+  background: var(--bg-color-secondary);
+  padding: 11px 23px;
+  border: 1px solid #e7e9fc;
+  border-radius: 4px;
+}
+
+.projects-btn .btn:hover,
+.projects-btn .btn:focus {
+  color: var(--bg-color-main);
+  background: var(--color-focus);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* ======== Стилізація проектів ======== */
+.projects-section {
+  padding-top: 96px;
+}
+
+.projects-section .projects-list {
+  padding-top: 72px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-right: -24px;
+  margin-top: -48px;
+}
+
+.projects-list .link {
+  display: inline-block;
+  max-width: 100%;
+  text-decoration: none;
+  border: 0.5px solid var(--bg-color-secondary);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.projects-list > .project-item {
+  max-width: 360px;
+  flex-basis: calc(100% / 3 - 24px);
+  margin-right: 24px;
+  margin-top: 48px;
+}
+
+.project-item > .link:hover,
+.project-item > .link:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.projects-list .title {
+  color: var(--color-title);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+.projects-list .text {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--color-main);
+}
+
+.projects-list .card-description {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+/* ======== Футер ======== */
+footer {
+  background: #2e2f42;
+  color: #e7e9fc;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+footer > .container {
+  display: flex;
+}
+
+footer .logo {
+  color: var(--bg-color-secondary);
+}
+
+footer .text {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-top: 16px;
+  max-width: 264px;
+}
+/* ======== Футер (список соц лінков) ======== */
+footer .footer-soc-links {
+  min-width: 208px;
+  margin-left: 120px;
+}
+
+.footer-soc-links > .text-title {
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+}
+
+.footer-soc-list {
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 16px;
+}
+
+.footer-soc-item {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-soc-item > .link {
+  display: block;
+  text-decoration: none;
+  line-height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px;
+}
+
+.footer-soc-item > .link:hover,
+.footer-soc-item > .link:focus {
+  background-color: #31d0aa;
+}
